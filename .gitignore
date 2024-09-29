@@ -1,0 +1,5 @@
+.env.prod.db
+.env.dev
+.env.prod
+Pipfile
+Pipfile.lock
