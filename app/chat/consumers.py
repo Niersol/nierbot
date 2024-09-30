@@ -1,10 +1,10 @@
+import os
 import json
 import openai
 from openai import OpenAI
-from django.conf import settings
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
-client = OpenAI(api_key=settings.OPENAI_APIKEY)
+client = OpenAI(api_key=os.environ.get('OPENAI_APIKEY'))
 class ChatConsumer(WebsocketConsumer):
      def connect(self):
         # Generate or retrieve the session key for anonymous users
